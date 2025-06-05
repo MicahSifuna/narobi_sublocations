@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { MapContainer, LayersControl, TileLayer, LayerGroup, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import "../map/map.css"
+import SearchBar from '../searchplace/SearchBar';
 
 const Map = () => {
    const [geoData, setGeoData] = useState(null);
@@ -40,7 +41,7 @@ const Map = () => {
                <h2>Nairobi Sublocations</h2>
                <MapContainer
                   center={position}
-                  zoom={12}
+                  zoom={11}
                   scrollWheelZoom={true}
                   ref={mapRef}
                   style={{ height: "100%", width: "100%" }}
@@ -69,6 +70,7 @@ const Map = () => {
 
                   {geoData && <GeoJSON data={geoData} style={geoStyle} onEachFeature={onEachFeature} />}
 
+                  <SearchBar />
                </MapContainer>
             </div>
          </>
