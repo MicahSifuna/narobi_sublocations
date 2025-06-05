@@ -1,0 +1,8 @@
+.leaflet-top.leaflet-left {
+  display: none; /* hide default left container */
+}
+.leaflet-top.leaflet-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
