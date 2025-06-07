@@ -41,7 +41,7 @@ const Map = () => {
                <h2>Nairobi Sublocations</h2>
                <MapContainer
                   center={position}
-                  zoom={11}
+                  zoom={12}
                   scrollWheelZoom={true}
                   ref={mapRef}
                   style={{ height: "100%", width: "100%" }}
