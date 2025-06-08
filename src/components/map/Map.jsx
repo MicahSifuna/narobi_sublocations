@@ -11,6 +11,7 @@ const Map = () => {
    const position = [-1.2921, 36.8219];  // Nairobi
 
    useEffect(() => {
+      // fetch('/data/nairobi_cluster.geojson')
       fetch('/data/nairobi_cluster.geojson')
          .then((res) => res.json())
          .then((data) => setGeoData(data))
