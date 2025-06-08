@@ -11,7 +11,7 @@ const Map = () => {
    const position = [-1.2921, 36.8219];  // Nairobi
 
    useEffect(() => {
-      fetch('/data/nairobi_sublocs.geojson')
+      fetch('/data/nairobi_cluster.geojson')
          .then((res) => res.json())
          .then((data) => setGeoData(data))
          .catch((err) => console.error("Failed to load GeoJSON", err));
@@ -27,7 +27,7 @@ const Map = () => {
 
    // Add labels using SLNAME
    const onEachFeature = (feature, layer) => {
-      const name = feature.properties?.SLNAME || "Unnamed";
+      const name = feature.properties?.layer || "Unnamed";
       layer.bindTooltip(name, {
          permanent: true,
          direction: 'center',
@@ -38,7 +38,7 @@ const Map = () => {
       <>
          <>
             <div id="map" style={{ height: "90vh" }}>
-               <h2>Nairobi Sublocations</h2>
+               <h4>Nairobi Cluster(Sector Demarcation)</h4>
                <MapContainer
                   center={position}
                   zoom={12}
