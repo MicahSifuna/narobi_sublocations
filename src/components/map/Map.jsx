@@ -42,7 +42,7 @@ const Map = () => {
                <h4>Nairobi Cluster(Sector Demarcation)</h4>
                <MapContainer
                   center={position}
-                  zoom={12}
+                  zoom={11}
                   scrollWheelZoom={true}
                   ref={mapRef}
                   style={{ height: "100%", width: "100%" }}
